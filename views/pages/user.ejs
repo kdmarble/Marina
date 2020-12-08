@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+  <%- include('../partials/jumbo'); %>
+  <p class="lead">Your JWT: <%= token %></p>
+  <p class="lead">Expires in: <%= expires_in %></p>
+  <p class="lead">Your User ID: <%= user_id %></p>
+  <%- include('../partials/scripts'); %>
+</body>
+</html>

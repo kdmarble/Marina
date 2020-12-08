@@ -1,0 +1,22 @@
+{
+  "name": "marblek-marina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^6.2.0",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "google-auth-library": "^6.1.3",
+    "google-gax": "^2.9.0",
+    "nodemon": "^2.0.5"
+  }
+}

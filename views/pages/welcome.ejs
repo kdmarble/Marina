@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body>
+  <%- include('../partials/jumbo'); %>
+  <%- include('../partials/scripts'); %>
+  <script>
+    document.addEventListener('DOMContentLoaded', init, false);
+  
+    async function init() {
+      const authorizeButton = document.getElementById("authorize");
+      
+      const authParams = {
+        client_id: "458360795355-1b6ueugq782nprjrmgagd6qk0lp2cna8.apps.googleusercontent.com",
+        redirect_uri: "https://marblek-project.uc.r.appspot.com/oauth",
+        response_type: "code",
+        scope: "https://www.googleapis.com/auth/userinfo.profile",
+        state: <%= secret %>
+      }
+  
+      const url = `https://accounts.google.com/o/oauth2/v2/auth?scope=${authParams.scope}&response_type=${authParams.response_type}&state=${authParams.state}&redirect_uri=${authParams.redirect_uri}&client_id=${authParams.client_id}`;
+  
+      authorizeButton.href = url;
+    }
+  </script>
+</body>
+</html>
